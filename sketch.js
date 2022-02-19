@@ -1,20 +1,30 @@
-var caixa;
+
 function setup() {
   createCanvas(400,400);
-  caixa = createSprite(200,200,25,25);
+  background(51)
+  box = createSprite(200,200,30,30);
 }
 
 function draw() {
-  background(30);
-  if(keyisDown("up")){
-    caixa.y -= 5;
+  
+  if (keyDown("RIGHT_ARROW")) {
+    background("red");
   }
-  if(keyisDown("down")){
-    caixa.y += 5;
+
+  if (keyDown("LEFT_ARROW")) {
+    background("blue");
   }
+ 
+  if (keyDown("UP_ARROW")) {
+    background("yellow");
+  }
+
+  if (keyDown("DOWN_ARROW")) {
+    background("green");
+  }
+
+
+  
   drawSprites();
 }
-
-
-
 
